@@ -4,15 +4,11 @@ import { useParams } from "react-router-dom";
 import ReactDOM from 'react-dom';
 
   const Tutorial1=()=>{
-    let { id } = useParams(); 
-    console.log(id);
+    let { id } = useParams();
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [published, setPublished] = useState(false);
-    const [updatePublished1, setUpdatePublish] = useState(false);
-    const [updateTutorial1, setUpdateTutorial] = useState(false);
-    const [deleteTutorial1, setDeleteTutorial] = useState(false);
 
     function getTutorial() {
       console.log("tutorial");
@@ -27,13 +23,11 @@ import ReactDOM from 'react-dom';
           console.log(e);
         });
     }
-  /* 
+  
     useEffect(() => {
+      getTutorial();
       console.log(`/something/${id}`);
   },[]);
-   */
-
-  getTutorial();
 
   const handleChangeTitle = (event1) => {
     setTitle(event1.target.value);
